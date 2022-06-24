@@ -1,0 +1,19 @@
+<!-- <p>categories works!</p> -->
+
+<h2>Categorias:</h2>
+
+<form #myForm="ngForm" (submit)="saveData(myForm)"></form>
+    <table>
+        <tbody>
+            <tr *ngFor="let categories of categoriesList">
+                <td>{{categories.name}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <h3>Nova Categoria</h3>
+        <label>Nome:</label>
+        <input type="text" name="nome" [(ngModel)]="newCategorie.name">
+        <input type="submit" value="Salvar">
+    </div>
